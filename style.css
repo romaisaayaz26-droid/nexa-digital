@@ -1,0 +1,265 @@
+/* 
+  Nexa Digital - Custom Stylesheet 
+  Theme Colors: Primary Blue & Dark Navy
+*/
+
+:root {
+  --primary-color: #2563eb;
+  --primary-hover: #1d4ed8;
+  --dark-color: #0f172a;
+  --text-dark: #1e293b;
+  --text-muted: #64748b;
+  --light-bg: #f8fafc;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--text-dark);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, .navbar-brand {
+  font-family: 'Poppins', sans-serif;
+  color: var(--dark-color);
+}
+
+.text-primary {
+  color: var(--primary-color) !important;
+}
+
+.bg-primary {
+  background-color: var(--primary-color) !important;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+  border-color: var(--primary-hover);
+}
+
+.btn-outline-primary {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.bg-primary-subtle {
+  background-color: rgba(37, 99, 235, 0.1) !important;
+}
+
+.section-padding {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.tracking-wide {
+  letter-spacing: 0.1em;
+}
+
+/* Navigation */
+.transition-navbar {
+  transition: all 0.3s ease;
+  padding: 1.2rem 0;
+  background-color: transparent;
+}
+
+.transition-navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  backdrop-filter: blur(10px);
+  padding: 0.8rem 0;
+}
+
+.nav-link {
+  color: var(--text-dark) !important;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--primary-color) !important;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+}
+
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  padding-top: 80px;
+  background: linear-gradient(135deg, #ffffff 0%, var(--light-bg) 100%);
+  position: relative;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 100%;
+  background-color: rgba(37, 99, 235, 0.03);
+  border-bottom-left-radius: 100%;
+  z-index: 0;
+}
+
+.hero-content, .hero-img {
+  position: relative;
+  z-index: 1;
+}
+
+/* Services */
+.service-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.08) !important;
+}
+
+.icon-box {
+  width: 60px;
+  height: 60px;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover .icon-box {
+  background-color: var(--primary-color) !important;
+  color: white !important;
+}
+
+/* About Section */
+.experience-badge {
+  z-index: 2;
+  border: 4px solid white;
+}
+
+/* Portfolio Section */
+.portfolio-item {
+  cursor: pointer;
+}
+
+.portfolio-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(15, 23, 42, 0.9) 0%, rgba(15, 23, 42, 0.1) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+  opacity: 1;
+}
+
+.portfolio-item img {
+  transition: transform 0.5s ease;
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.1);
+}
+
+/* Testimonials */
+.testimonial-card {
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Pricing */
+.pricing-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+}
+
+.featured-pricing {
+  transform: scale(1.05);
+  z-index: 2;
+}
+
+.featured-pricing:hover {
+  transform: scale(1.05) translateY(-10px);
+}
+
+@media (max-width: 991px) {
+  .featured-pricing {
+    transform: scale(1);
+  }
+  .featured-pricing:hover {
+    transform: translateY(-10px);
+  }
+}
+
+/* Footer */
+.footer-link {
+  transition: color 0.3s ease, padding-left 0.3s ease;
+}
+
+.footer-link:hover {
+  color: white !important;
+  padding-left: 5px;
+}
+
+/* Scroll Animations */
+.reveal {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.reveal.active {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+
+.fade-up {
+  transform: translateY(50px);
+}
+
+.fade-up.active {
+  transform: translateY(0);
+}
+
+.fade-left {
+  transform: translateX(50px);
+}
+
+.fade-left.active {
+  transform: translateX(0);
+}
+
+.fade-right {
+  transform: translateX(-50px);
+}
+
+.fade-right.active {
+  transform: translateX(0);
+}
+
+/* Utility to ensure elements without js don't hide forever */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
